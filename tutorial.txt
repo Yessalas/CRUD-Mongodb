@@ -6,6 +6,5 @@
 - Passo 5: Criar um módulo de conexão...
            ATENÇÃO! Validar as conexões (somente conectar se 
            nenhuma outra conexão estiver aberta.)
+- Passo 6: Importar no main os métdos conectar e desconectar.
 
-
--- Para ligar 
