@@ -11,7 +11,7 @@ const mongoose = require('mongoose')
 // Obs: Atlas (Obter via compass) 
 // para criar um banco de dados personalizado basta escolher o nome no final da url (ex:dbclientes)
 
-const url = 'mongodb+srv://admin:123senac@aws-db.rvfet.mongodb.net/dbclientes'
+const url = 'mongodb+srv://admin:123senac@aws-db.rvfet.mongodb.net/dbyesenia'
 
 // criar uma variavel de apoio para validação
 let conectado = false
@@ -26,6 +26,7 @@ const conectar = async() =>{
             await mongoose.connect(url) // conectar
             conectado = true // setar a variavel
             console.log ("MongoDB conectado")
+            return true // para o main identificar a conexão estabelecida com sucesso
         }catch(error){
             if(error.code = 8000){
                 console.log("Erro de autenticação")
@@ -47,6 +48,7 @@ const desconectar = async() =>{
             await mongoose.disconnect(url) //desconectar
             conectado = false // setar a variavel
             console.log ("MongoDB desconectado")
+            return true // para o main identificar a conexão estabelecida com sucesso
         }catch(error){
             console.log (error)
         }
